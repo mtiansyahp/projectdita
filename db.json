@@ -1,0 +1,164 @@
+{
+    "assets": [
+        {
+            "id": 1,
+            "nama": "Laptop Dell XPS",
+            "jumlah": 12,
+            "status": "Layak",
+            "umur": "3 tahun",
+            "riwayat": "5 kali"
+        },
+        {
+            "id": 2,
+            "nama": "Monitor Samsung 24\"",
+            "jumlah": 8,
+            "status": "Tidak Layak",
+            "umur": "18 Bulan",
+            "riwayat": "12 kali"
+        },
+        {
+            "id": 3,
+            "nama": "Keyboard Logitech",
+            "jumlah": 25,
+            "status": "Layak",
+            "umur": "6 Bulan",
+            "riwayat": "3 kali"
+        },
+        {
+            "id": 4,
+            "nama": "Mouse Microsoft",
+            "jumlah": 30,
+            "status": "Layak",
+            "umur": "1 tahun",
+            "riwayat": "2 kali"
+        },
+        {
+            "id": 5,
+            "nama": "Printer HP",
+            "jumlah": 5,
+            "status": "Tidak Layak",
+            "umur": "4 tahun",
+            "riwayat": "20 kali"
+        },
+        {
+            "id": 6,
+            "nama": "Proyektor Epson",
+            "jumlah": 3,
+            "status": "Layak",
+            "umur": "2 tahun",
+            "riwayat": "7 kali"
+        },
+        {
+            "id": 7,
+            "nama": "Router Cisco",
+            "jumlah": 10,
+            "status": "Layak",
+            "umur": "24 Bulan",
+            "riwayat": "4 kali"
+        },
+        {
+            "id": 8,
+            "nama": "Switch TP-Link",
+            "jumlah": 15,
+            "status": "Tidak Layak",
+            "umur": "30 Bulan",
+            "riwayat": "9 kali"
+        },
+        {
+            "id": 9,
+            "nama": "UPS APC",
+            "jumlah": 7,
+            "status": "Layak",
+            "umur": "5 tahun",
+            "riwayat": "11 kali"
+        },
+        {
+            "id": 10,
+            "nama": "Harddisk Seagate 1TB",
+            "jumlah": 20,
+            "status": "Layak",
+            "umur": "8 Bulan",
+            "riwayat": "6 kali"
+        },
+        {
+            "id": 11,
+            "nama": "Flashdisk Sandisk 32GB",
+            "jumlah": 50,
+            "status": "Layak",
+            "umur": "10 Bulan",
+            "riwayat": "15 kali"
+        },
+        {
+            "id": 12,
+            "nama": "Headset Sony",
+            "jumlah": 18,
+            "status": "Tidak Layak",
+            "umur": "2 tahun",
+            "riwayat": "14 kali"
+        },
+        {
+            "id": 13,
+            "nama": "Webcam Logitech C920",
+            "jumlah": 9,
+            "status": "Layak",
+            "umur": "1 tahun",
+            "riwayat": "8 kali"
+        },
+        {
+            "id": 14,
+            "nama": "Speaker JBL",
+            "jumlah": 6,
+            "status": "Layak",
+            "umur": "3 Bulan",
+            "riwayat": "1 kali"
+        },
+        {
+            "id": 15,
+            "nama": "Scanner Canon",
+            "jumlah": 4,
+            "status": "Tidak Layak",
+            "umur": "5 tahun",
+            "riwayat": "18 kali"
+        },
+        {
+            "id": 16,
+            "nama": "Tablet Apple iPad",
+            "jumlah": 8,
+            "status": "Layak",
+            "umur": "14 Bulan",
+            "riwayat": "3 kali"
+        },
+        {
+            "id": 17,
+            "nama": "Smartphone Samsung",
+            "jumlah": 12,
+            "status": "Layak",
+            "umur": "6 Bulan",
+            "riwayat": "7 kali"
+        },
+        {
+            "id": 18,
+            "nama": "Kamera Canon EOS",
+            "jumlah": 2,
+            "status": "Tidak Layak",
+            "umur": "4 tahun",
+            "riwayat": "22 kali"
+        },
+        {
+            "id": 19,
+            "nama": "Microphone Blue Yeti",
+            "jumlah": 5,
+            "status": "Layak",
+            "umur": "20 Bulan",
+            "riwayat": "9 kali"
+        },
+        {
+            "id": 20,
+            "nama": "Projector Screen",
+            "jumlah": 3,
+            "status": "Layak",
+            "umur": "2 tahun",
+            "riwayat": "5 kali"
+        }
+    ]
+}
