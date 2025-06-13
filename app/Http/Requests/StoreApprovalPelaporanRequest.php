@@ -17,7 +17,7 @@ class StoreApprovalPelaporanRequest extends FormRequest
             'manufaktur' => 'required|string',
             'namaBarang' => 'required|string',
             'riwayat' => 'required|string',
-            'kelayakan' => 'required|string',
+            'kelayakan' => 'required|integer',
             'catatan' => 'nullable|string',
             'evidence' => 'required|array|min:1',
             'evidence.*.name' => 'required|string',
