@@ -38,16 +38,19 @@ class AuthController extends Controller
             'password' => 'required|string',
         ]);
 
-        // Attempt authentication
+        //validate untuk dia mengecek ini sesuai format ga?
+
+        // ini untuk mencoba cek apakah benar password dan emailnya
         if (! Auth::attempt($request->only('email', 'password'))) {
             return response()->json([
                 'message' => 'Invalid credentials'
-            ], 401);
+            ], 401); // jika gagal maka return satu fungsi ini
         }
 
         $user  = Auth::user();
 
         // create a personal access token (Sanctum)
+        // untuk membuat token expired 
         $token = $user->createToken('api-token')->plainTextToken;
         // no need for makeHidden() since $hidden is defined
         return response()->json([
@@ -57,6 +60,6 @@ class AuthController extends Controller
                 'token' => $token,
                 'role' => $user->role // Tambahkan ini
             ],
-        ], 200);
+        ], 200);// jika berhasil mengembalikan return atau kembalian tulisan login sucess dan masukin data ke local storage di (aplication inspect element )data berisi, data user, data token dan role
     }
 }

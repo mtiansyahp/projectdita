@@ -6,6 +6,8 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\EquipmentLaboratoriumController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\ApprovalPelaporanController;
+use App\Http\Controllers\Api\EquipmentSummaryController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -42,12 +44,15 @@ Route::middleware('auth:sanctum')->prefix('users')->group(function () {
 });
 
 Route::prefix('approval-pelaporan')->group(function () {
-    Route::get('/', [ApprovalPelaporanController::class, 'index']);
-    Route::get('/{id}', [ApprovalPelaporanController::class, 'show']);
-    Route::post('/', [ApprovalPelaporanController::class, 'store']);
-    Route::put('/{id}', [ApprovalPelaporanController::class, 'update']);
-    Route::delete('/{id}', [ApprovalPelaporanController::class, 'destroy']);
+    Route::get('/', [ApprovalPelaporanController::class, 'index']);// untuk mengambil semua data approval pelaporan
+    Route::get('/{id}', [ApprovalPelaporanController::class, 'show']); // untuk mengambil data approval pelaporan berdasarkan id
+    Route::post('/', [ApprovalPelaporanController::class, 'store']); // untuk menyimpan data approval pelaporan
+    Route::put('/{id}', [ApprovalPelaporanController::class, 'update']); // untuk mengupdate data approval pelaporan berdasarkan id
+    Route::delete('/{id}', [ApprovalPelaporanController::class, 'destroy']); // untuk menghapus data approval pelaporan berdasarkan id
 });
+
+
+Route::get('equipment-summary', [EquipmentSummaryController::class, 'index']);
 
 
 
