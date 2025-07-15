@@ -105,10 +105,10 @@ class ApprovalPelaporanController extends Controller
         }
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $id) 
     {
         try {
-            $approval = ApprovalPelaporan::with('evidences')->findOrFail($id);
+            $approval = ApprovalPelaporan::with('evidences')->findOrFail($id); // ambil approval beserta evidences-nya
 
             // Jika yang dikirim hanya update status (approve/reject)
             if ($request->has('status_approve')) {
