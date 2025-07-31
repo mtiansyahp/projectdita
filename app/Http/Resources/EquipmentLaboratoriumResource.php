@@ -21,8 +21,12 @@ class EquipmentLaboratoriumResource extends JsonResource
             'quantity'       => $this->quantity,
             'umur'           => $this->umur,
             'kondisi_barang' => $this->kondisi_barang,
-            'created_at'     => $this->created_at,
-            'updated_at'     => $this->updated_at,
+            'created_at'     => $this->created_at
+                ? $this->created_at->timezone('Asia/Jakarta')->format('Y-m-d H:i:s')
+                : null,
+            'updated_at'     => $this->updated_at
+                ? $this->updated_at->timezone('Asia/Jakarta')->format('Y-m-d H:i:s')
+                : null,
         ];
     }
 }

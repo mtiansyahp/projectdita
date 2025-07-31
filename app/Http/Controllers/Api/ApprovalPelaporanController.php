@@ -18,7 +18,9 @@ class ApprovalPelaporanController extends Controller
     public function index(Request $request)
     {
         try {
-            $query = ApprovalPelaporan::with('evidences');
+            $query = ApprovalPelaporan::with('evidences')
+                ->orderByRaw('CASE WHEN created_at IS NULL THEN 1 ELSE 0 END') // null ke bawah
+                ->orderBy('created_at', 'asc'); // yang valid dari lama ke baru
 
             $data = $query->paginate($request->input('per_page', 10));
 
@@ -105,7 +107,7 @@ class ApprovalPelaporanController extends Controller
         }
     }
 
-    public function update(Request $request, $id) 
+    public function update(Request $request, $id)
     {
         try {
             $approval = ApprovalPelaporan::with('evidences')->findOrFail($id); // ambil approval beserta evidences-nya

@@ -9,6 +9,7 @@ use App\Http\Controllers\Api\ApprovalPelaporanController;
 use App\Http\Controllers\Api\EquipmentSummaryController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -44,7 +45,7 @@ Route::middleware('auth:sanctum')->prefix('users')->group(function () {
 });
 
 Route::prefix('approval-pelaporan')->group(function () {
-    Route::get('/', [ApprovalPelaporanController::class, 'index']);// untuk mengambil semua data approval pelaporan
+    Route::get('/', [ApprovalPelaporanController::class, 'index']); // untuk mengambil semua data approval pelaporan
     Route::get('/{id}', [ApprovalPelaporanController::class, 'show']); // untuk mengambil data approval pelaporan berdasarkan id
     Route::post('/', [ApprovalPelaporanController::class, 'store']); // untuk menyimpan data approval pelaporan
     Route::put('/{id}', [ApprovalPelaporanController::class, 'update']); // untuk mengupdate data approval pelaporan berdasarkan id
@@ -53,6 +54,7 @@ Route::prefix('approval-pelaporan')->group(function () {
 
 
 Route::get('equipment-summary', [EquipmentSummaryController::class, 'index']);
+Route::get('/equipment-detail-summary', [EquipmentSummaryController::class, 'detailSummary']);
 
 
 

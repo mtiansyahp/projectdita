@@ -9,16 +9,13 @@ use Illuminate\Support\Facades\DB;
 class EquipmentSummaryController extends Controller
 {
     /**
-     * GET  /api/equipment-summary
-     * Return JSON from the v_equipment_and_report_summary view
+     * GET /api/equipment-summary
+     * Mengembalikan ringkasan statistik aset
      */
     public function index(Request $request)
     {
-        // Ambil satu baris ringkasan dari view
-        $summary = DB::table('v_equipment_and_report_summary')->first();
-        // ini untuk ambil data view dari table dan tampilkan di frontend
+        $summary = DB::table('v_equipment_and_report_summary_1')->first();
 
-        // Pastikan kita casting ke tipe primitif
         return response()->json([
             'total_asset'               => (int)   $summary->total_asset,
             'total_asset_layak'         => (int)   $summary->total_asset_layak,
@@ -26,6 +23,33 @@ class EquipmentSummaryController extends Controller
             'ratio_asset_layak'         => (float) $summary->ratio_asset_layak,
             'ratio_asset_tidak_layak'   => (float) $summary->ratio_asset_tidak_layak,
             'total_pelaporan'           => (int)   $summary->total_pelaporan,
+        ]);
+    }
+
+    /**
+     * GET /api/equipment-detail-summary
+     * Mengembalikan data detail equipment dan pelaporan
+     */
+    public function detailSummary(Request $request)
+    {
+        $query = DB::table('v_equipment_and_report_summary');
+
+        if ($request->has('kondisi')) {
+            $kondisi = $request->get('kondisi');
+
+            // Tangani operator !=
+            if (str_starts_with($kondisi, '!=')) {
+                $value = trim(substr($kondisi, 2));
+                $query->where('kondisi_barang', '!=', $value);
+            } else {
+                $query->where('kondisi_barang', $kondisi);
+            }
+        }
+
+        $data = $query->get();
+
+        return response()->json([
+            'data' => $data
         ]);
     }
 }
